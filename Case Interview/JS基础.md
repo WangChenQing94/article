@@ -96,3 +96,56 @@ new的作用？
 	3.一旦执行栈中的所有同步任务执行完毕，系统就会读取任务队列，那些对应的异步任务于是结束等待状态，进入执行站开始执行；
 	4.主线程不断重复上面的第三步；
 	JS只有一个主线程，主线程执行完执行栈的任务后去检查异步的任务队列，如果异步事件触发，则将其加到主线程的执行栈，主线程不断重复这个过程；
+
+
+ES6的新特性有哪些？
+1. let和const
+2. 字符串模板
+3. 变量的解耦赋值
+4. 箭头函数
+5. Array.from Array.of
+6. Set数据结构(类似数组，但是成员的值都是唯一的，没有重复的值)
+7. Proxy 作用是对目标对象提供拦截行为
+8. Promise对象
+9. async 函数
+10. module语法
+
+ES6模块和CommonJS模块的差异：
+* CommonJS模块输出的是一个值的拷贝，ES6模块输出的是值的引用
+	CommonJS模块输出一个值，模块内部的变化不会影响该值，除非写一个函数才能获取内部改动后的值。
+	ES6输出的值，如果原始值改变，那输出的值也会跟着变。
+* CommonJS模块是运行时加载，ES6模块是编译时输出接口
+	CommonJS记载的是一个对象，该对象只有在脚本运行完才会生成。
+	ES6模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。
+
+
+Webpack3和Webpack4有什么区别？
+1.webpack4新增mode选项。根据配置类型将其设置为生产或开发。
+2.弃用部分插件，包括压缩js的UglifyJsPlugin，DefinePlugin创建一个在编译是可以配置的全局常量的插件；
+压缩插件改用Optimization选项，DefinePlugin内置到new Webpack里面
+
+
+webpack4常用Loading有哪些？
+babel-loader：允许使用babel和webpack转译js文件
+css-loader
+postcss-loader
+sass-loader
+style-loader
+less-loader
+url-loader
+file-loader
+
+webpack4常用的plugin有哪些？
+webpack.Defineplugin：允许创建一个在编译时可以配置的全局常量
+webpack.HotModuleReplacementPlugin：热替换模块
+webpack.optimize.LimitChunkCountPlugin：可以通过合并的方式，处理你的chunk，以减少请求数
+UglifyjsWebpackPlugin：压缩JS代码
+htmlWebpackPlugin
+CleanWebpackPlugin
+
+
+
+
+
+
+
